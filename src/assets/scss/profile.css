@@ -7,7 +7,7 @@
 body {
   color: #2b2c48;
   font-family: "Jost", sans-serif;
-  background-image: url(assets/img/background/05.jpg);
+  background-image: url(https://images.unsplash.com/photo-1544237529-10b958ec0461?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1074&q=80);
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
@@ -55,7 +55,7 @@ body {
   height: 430px;
 }
 
-.card[data-state="experience"] {
+.card[data-state="#experience"] {
   height: 550px;
 }
 
@@ -68,13 +68,20 @@ body {
   top: -50px;
 }
 
-.card.is-active .card-avantar {
+.card.is-active .card-avatar {
   -webkit-transform: none;
           transform: none;
   left: 20px;
   width: 50px;
   height: 50px;
   bottom: 10px;
+}
+
+.card.is-active .card-fullname,
+.card.is-active .card-jobtitle {
+  left: 86px;
+  -webkit-transform: none;
+          transform: none;
 }
 
 .card.is-active .card-fullname {
@@ -145,7 +152,7 @@ body {
   position: absolute;
   bottom: 0;
   font-size: 22px;
-  font-weight: 700px;
+  font-weight: 700;
   text-align: center;
   white-space: nowrap;
   -webkit-transform: translateY(-10px) translateX(-50%);
@@ -250,7 +257,7 @@ body {
   margin-right: 0;
 }
 
-.cards-buttons {
+.card-buttons {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -262,7 +269,7 @@ body {
   left: 0;
 }
 
-.cards-buttons button {
+.card-buttons button {
   -webkit-box-flex: 1;
       -ms-flex: 1 1 auto;
           flex: 1 1 auto;
@@ -284,7 +291,7 @@ body {
   border-bottom: 3px solid transparent;
 }
 
-.cards-buttons button.is-active .cards-buttons button:hover {
+.card-buttons button.is-active, .card-buttons button:hover {
   color: #2b2c48;
   border-bottom: 3px solid #8a84ff;
   background: -webkit-gradient(linear, left top, left bottom, from(rgba(127, 199, 231, 0)), color-stop(44%, rgba(207, 204, 255, 0.2)), to(rgba(211, 226, 255, 0.4)));

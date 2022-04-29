@@ -1,5 +1,6 @@
-const buttons = document.querySelectorAll(".card-buttons button");
 
+
+const buttons = document.querySelectorAll(".card-buttons button");
 const sections = document.querySelectorAll(".card-section");
 const card = document.querySelector(".card");
 

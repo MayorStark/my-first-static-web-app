@@ -6,7 +6,7 @@
 body {
   color: #2b2c48;
   font-family: "Jost", sans-serif;
-  background-image: url(assets/img/background/05.jpg);
+  background-image: url(https://images.unsplash.com/photo-1566738780863-f9608f88f3a9?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2378&q=80);
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
@@ -43,7 +43,7 @@ body {
   height: 430px;
 }
 
-.card[data-state=experience] {
+.card[data-state="#experience"] {
   height: 550px;
 }
 
@@ -54,12 +54,17 @@ body {
   height: 100px;
   top: -50px;
 }
-.card.is-active .card-avantar {
+.card.is-active .card-avatar {
   transform: none;
   left: 20px;
   width: 50px;
   height: 50px;
   bottom: 10px;
+}
+.card.is-active .card-fullname,
+.card.is-active .card-jobtitle {
+  left: 86px;
+  transform: none;
 }
 .card.is-active .card-fullname {
   bottom: 18px;
@@ -115,7 +120,7 @@ body {
   position: absolute;
   bottom: 0;
   font-size: 22px;
-  font-weight: 700px;
+  font-weight: 700;
   text-align: center;
   white-space: nowrap;
   transform: translateY(-10px) translateX(-50%);
@@ -195,7 +200,7 @@ body {
   margin-right: 0;
 }
 
-.cards-buttons {
+.card-buttons {
   display: flex;
   background-color: #fff;
   margin-top: auto;
@@ -203,7 +208,7 @@ body {
   bottom: 0;
   left: 0;
 }
-.cards-buttons button {
+.card-buttons button {
   flex: 1 1 auto;
   user-select: none;
   background: 0;
@@ -218,7 +223,7 @@ body {
   outline: 0;
   border-bottom: 3px solid transparent;
 }
-.cards-buttons button.is-active .cards-buttons button:hover {
+.card-buttons button.is-active, .card-buttons button:hover {
   color: #2b2c48;
   border-bottom: 3px solid #8a84ff;
   background: linear-gradient(to bottom, rgba(127, 199, 231, 0) 0%, rgba(207, 204, 255, 0.2) 44%, rgba(211, 226, 255, 0.4) 100%);
