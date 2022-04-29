@@ -1,0 +1,160 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+#wrapper{
+    width: 100%;
+    height: 100vh;
+    background: #404263;
+    background: -moz-linear-gradient(45deg,  #262e51 0%, #51516d 100%);
+    background: -webkit-linear-gradient(45deg,  #262e51 0%, #51516d 100%);
+    background: linear-gradient(45deg, #262e51 0%, #51516d 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#262e51', endColorstr='51516d', GradientType=1);
+}
+
+#svg_container{
+    width: calc(~'100vh - 40px');
+    height: calc(~'100vh - 40px');
+    margin: 0 auto;
+    padding: 20px 0;
+}
+@font-face{
+    font-family: sofia3;
+    src: url(https://assets.pixlee.com/pixlee_fonts/sofia_regular.otf);
+}// @font-face
+.sofia3{
+    font-family: sofia3, sans-serif;
+}//sofia3
+#button{
+    position: fixed;
+    right: 10px;
+    top: 10px;
+    padding: 13px 15px 12px 15px;;
+    text-align: center;
+    color: #373C5E;
+    font-weight: bold;
+    .sofia3;
+    text-transform: uppercase;
+    font-size: 10px;
+    width: 100px;
+    background: #e5bc1f;
+    background: -moz-linear-gradient(45deg, #e5bc1f 0%, #7b7a7a 100%);
+    background: -webkit-linear-gradient(45deg, #e5bc1f 0%, #7b7a7a 100%);
+    background: linear-gradient(45deg, #e5bc1f 0%, #7b7a7a 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#e5bc1f', endColorstr='#7b7a7a', GradientType=1);
+    border-radius: 3px;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    -ms-border-radius: 3px;
+    -o-border-radius: 3px;
+    cursor: pointer;
+    transition: all 0.25s ease;
+    &:after{
+        content: 'para ya';
+    }
+    &:active:after{
+        content: 'adelante pues';
+    }
+}
+
+#Layer_2.active{
+    .animationduration(50s);
+    .animationname(spin_backward);
+    .animationiteration(infinite);
+    .animationtiming(linear);
+    .transformorigin(center center); 
+  }
+  #Layer_3.active{
+    .animationduration(40s);
+    .animationname(spin_forward);
+    .animationiteration(infinite);
+    .animationtiming(linear);
+    .transformorigin(center center);
+  }
+  #Layer_4.active{
+    .animationduration(20s);
+    .animationname(spin_backward);
+    .animationiteration(infinite);
+    .animationtiming(linear);
+    .transformorigin(center center);
+  }
+  
+  @keyframes spin_forward{
+    from{
+      transform: rotate(0deg);
+    }
+    to{
+      transform: rotate(360deg);
+    }
+  }
+  @-webkit-keyframes spin_forward{
+    from{
+      transform: rotate(0deg);
+    }
+    to{
+      transform: rotate(360deg);
+    }
+  }
+  @-moz-keyframes spin_forward{
+    from{
+      transform: rotate(0deg);
+    }
+    to{
+      transform: rotate(360deg);
+    }
+  }
+  
+  @keyframes spin_backward{
+    from{
+      transform: rotate(360deg);
+    }
+    to{
+      transform: rotate(0deg);
+    }
+  }
+  @-webkit-keyframes spin_backward{
+    from{
+      transform: rotate(360deg);
+    }
+    to{
+      transform: rotate(0deg);
+    }
+  }
+  @-moz-keyframes spin_backward{
+    from{
+      transform: rotate(360deg);
+    }
+    to{
+      transform: rotate(0deg);
+    }
+  }
+  
+  .animationduration(@argument){
+    animation-duration: @argument;
+    -webkit-animation-duration: @argument;
+    -moz-animation-duration: @argument;
+  }
+  .animationname(@argument){
+    animation-name: @argument;
+    -webkit-animation-name: @argument;
+    -moz-animation-name: @argument;
+  }
+  
+  .animationiteration(@argument){
+    animation-iteration-count: @argument;
+    -webkit-animation-iteration-count: @argument;
+    -moz-animation-iteration-count: @argument;
+  }
+  
+  .animationtiming(@argument){
+    animation-timing-function: @argument;
+    -webkit-animation-timing-function: @argument;
+    -moz-animation-timing-function: @argument;
+  }
+  .transformorigin(@argument){
+    transform-origin: @argument;
+    -webkit-transform-origin: @argument;
+    -moz-transform-origin: @argument;
+  }
+  
