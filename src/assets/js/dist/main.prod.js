@@ -1,1 +1,0 @@
-"use strict";$(function(){var s=!0;$("#button").click(function(){1==s?($(".svg_layer").attr("class","svg_layer"),s=!1,$(this).addClass("active")):($(".svg_layer").attr("class","active svg_layer"),s=!0,$(this).removeClass("active"))})});
